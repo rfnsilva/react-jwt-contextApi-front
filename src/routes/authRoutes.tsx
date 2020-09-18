@@ -1,11 +1,10 @@
 import React from 'react';
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
 
-import Home from './pages/home';
-import Cadastro from './pages/cadastro';
-import { AuthProvider } from './contexts/auth'
+import Cadastro from '../pages/cadastro';
+import { AuthProvider } from '../contexts/auth'
 
-export default function Routes() {
+const AuthRoutes: React.FC = () => {
   return (
     <BrowserRouter>
       <Switch>
@@ -13,11 +12,10 @@ export default function Routes() {
           <Route exact path="/">
             <Cadastro />
           </Route>
-          <Route exact path="/home">
-            <Home />
-          </Route>
         </AuthProvider>
       </Switch>
     </BrowserRouter>
   );
 }
+
+export default AuthRoutes;

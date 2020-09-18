@@ -16,6 +16,8 @@ export const AuthProvider: React.FC = ({ children }) => {
     const response = await API.post('/cadastrar', { user });
 
     setUser(response.data);
+
+    localStorage.setItem('user', JSON.stringify(response.data));
     
     return user;
   }
@@ -24,7 +26,7 @@ export const AuthProvider: React.FC = ({ children }) => {
     <AuthContext.Provider
       value={{
         user,
-        signed: false,
+        signed: !!user,
         signIn
       }}
     >

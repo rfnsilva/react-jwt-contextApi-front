@@ -31,12 +31,12 @@ const InputGroup: React.FC = () => {
       const response = await signIn(user);
 
       if(response !== null){
-        //console.log(response)
         setRedirect(true);
       }
       else{
-        console.log('erro caralho, seu burro da peste !')
+        console.log('erro no response !')
         setRedirect(false);
+        return <Redirect to="/" />
       }
     } catch(error){
       console.log(error)
@@ -46,7 +46,7 @@ const InputGroup: React.FC = () => {
 
   if(redirect) {
     return <Redirect to="/home" />
-  } 
+  }
   else{
     return (
       <Container>

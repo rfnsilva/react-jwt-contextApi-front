@@ -1,14 +1,16 @@
 import React, { useContext } from 'react';
-
-import AuthContext from "../contexts/auth";
+import { Redirect } from 'react-router-dom';
 
 const Home: React.FC = () => {
-  const { user } = useContext(AuthContext)
+  const storage: any = localStorage.getItem('user');
+  const userData = JSON.parse(storage);
 
-  console.log(user)
+  if(userData === null) {
+    return <Redirect to="/" />
+  }
 
   return (
-    <h1>Bem vindo {user}</h1>
+    <h1>Bem vindo {userData.nome} </h1>
   );
 }
 
