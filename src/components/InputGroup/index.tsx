@@ -1,5 +1,6 @@
 import React, { useContext, useState } from 'react';
 import { Redirect } from 'react-router-dom';
+
 import AuthContext from '../../contexts/auth';
 
 import { MenuForm, Container } from './styles';
@@ -14,7 +15,7 @@ const InputGroup: React.FC = () => {
 
   const [ redirect, setRedirect ] = useState<boolean>(false);
 
-  const { signIn } = useContext(AuthContext)
+  const { signIn } = useContext(AuthContext);
 
   //subimit form
   const HandleFormSubmit = async () => {

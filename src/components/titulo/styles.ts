@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 export const Title = styled.h1`
   text-align: center;
-  margin: 44px 0 35px;
+  margin: 30px 0 -13px;
   font-family: Open Sans;
   font-weight: 600;
   font-size: 16px;

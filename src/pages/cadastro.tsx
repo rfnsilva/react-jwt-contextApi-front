@@ -5,7 +5,7 @@ import InputGroup from '../components/InputGroup';
 import Footer from '../components/footer';
 
 import { Formulario, Logo, Main } from '../styles';
-import logo from '../logo.svg';
+import logo from '../styles/logo.svg';
 
 const Cadastro: React.FC = () => {
   return (
@@ -16,10 +16,14 @@ const Cadastro: React.FC = () => {
         </Logo>
 
         <Formulario>
+
           <Titulo />
           <InputGroup />
           <Footer />
+
         </Formulario>
+        
+
       </Main>
     </>
   );

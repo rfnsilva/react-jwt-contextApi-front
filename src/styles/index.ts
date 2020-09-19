@@ -2,7 +2,8 @@ import styled from 'styled-components';
 
 export const Main = styled.div`
   position: absolute;
-  width: 98.9vw;
+  display: flex;
+  width: 100%;
   height: 1269px;
   left: 0px;
   top: 0px;
@@ -20,7 +21,7 @@ export const Logo = styled.div`
 export const Formulario = styled.div`
   position: absolute;
   width: 547px;
-  height: 637px;
+  height: 622px;
   left: 446px;
   top: 248px;
 

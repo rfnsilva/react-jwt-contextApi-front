@@ -5,7 +5,7 @@ import Home from './pages/home';
 import Cadastro from './pages/cadastro';
 import { AuthProvider } from './contexts/auth'
 
-export default function Routes() {
+const Routes: React.FC = () => {
   return (
     <BrowserRouter>
       <Switch>
@@ -21,3 +21,5 @@ export default function Routes() {
     </BrowserRouter>
   );
 }
+
+export default Routes;
