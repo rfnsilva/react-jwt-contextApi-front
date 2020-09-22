@@ -15,10 +15,11 @@ const InputGroup: React.FC = () => {
 
   const [ redirect, setRedirect ] = useState<boolean>(false);
 
-  const { signIn } = useContext(AuthContext);
+  //context com a metodo que sera usado para realizar o cadastro
+  const { signUp } = useContext(AuthContext);
 
   //subimit form
-  const HandleFormSubmit = async () => {
+  const SubmitForm = async () => {
     const user = {
       nome: nome,
       sobrenome: sobrenome,
@@ -29,8 +30,9 @@ const InputGroup: React.FC = () => {
     };
     
     try{
-      const response = await signIn(user);
+      const response = await signUp(user);
 
+      //se o cadastro for feito com sucesso redireciona para a page home
       if(response !== null){
         setRedirect(true);
       }
@@ -64,7 +66,7 @@ const InputGroup: React.FC = () => {
             Ao se cadastrar você automaticamente concorda com nossos <a href="/termos">Termos de Uso</a>
           </p>
 
-          <button onClick={HandleFormSubmit} type="submit">Cadastrar</button>
+          <button onClick={SubmitForm} type="submit">Cadastrar</button>
 
         </MenuForm>
       </Container>
